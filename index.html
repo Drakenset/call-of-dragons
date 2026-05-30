@@ -2,12 +2,12 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Турнирная сетка</title>
+<title>Круговой турнир</title>
 <style>
     body {
         margin: 0;
-        background: #0f0f14;
-        color: white;
+        background: #0e0f14;
+        color: #fff;
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
@@ -16,104 +16,114 @@
 
     h1 {
         margin: 20px;
-        font-size: 28px;
     }
 
-    .bracket {
-        display: flex;
-        gap: 60px;
-        padding: 20px;
+    .container {
+        width: 90%;
+        max-width: 1000px;
     }
 
-    .group {
-        background: #1a1a23;
-        padding: 15px;
-        border-radius: 12px;
-        width: 220px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    /* Таблица */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #1a1c24;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
     }
 
-    .group h2 {
+    th, td {
+        padding: 12px;
         text-align: center;
-        font-size: 18px;
-        margin-bottom: 10px;
+        border-bottom: 1px solid #2a2d3a;
+    }
+
+    th {
+        background: #222533;
         color: #ffcc00;
     }
 
-    .team {
-        background: #2a2a38;
-        margin: 6px 0;
-        padding: 8px;
-        border-radius: 8px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-    }
-
-    .qualified {
-        border: 1px solid #00ff88;
-    }
-
-    .score {
-        color: #aaa;
-    }
-
-    .playoffs {
-        margin-top: 40px;
-        display: flex;
-        gap: 40px;
+    /* Матчи */
+    .matches {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 40px;
     }
 
     .match {
-        background: #1a1a23;
-        padding: 10px;
+        background: #1a1c24;
+        padding: 12px;
         border-radius: 10px;
-        width: 180px;
         text-align: center;
+        border: 1px solid #2a2d3a;
     }
 
     .vs {
         color: #888;
         margin: 5px 0;
     }
+
+    /* Финал */
+    .final {
+        margin-top: 20px;
+        padding: 20px;
+        background: #11131a;
+        border: 2px solid #ffcc00;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .final h2 {
+        margin-bottom: 10px;
+        color: #ffcc00;
+    }
+
 </style>
 </head>
 <body>
 
-<h1>Турнирная сетка</h1>
+<h1>Круговой турнир (5 команд)</h1>
 
-<div class="bracket">
+<div class="container">
 
-    <div class="group">
-        <h2>Группа A</h2>
-        <div class="team qualified"><span>Team 1</span><span class="score">3-0</span></div>
-        <div class="team qualified"><span>Team 2</span><span class="score">2-1</span></div>
-        <div class="team"><span>Team 3</span><span class="score">1-2</span></div>
-        <div class="team"><span>Team 4</span><span class="score">0-3</span></div>
+    <!-- ТАБЛИЦА -->
+    <table>
+        <tr>
+            <th>Команда</th>
+            <th>Очки</th>
+        </tr>
+        <tr><td>Команда 1</td><td>999999</td></tr>
+        <tr><td>Команда 2</td><td>999999</td></tr>
+        <tr><td>Команда 3</td><td>999999</td></tr>
+        <tr><td>Команда 4</td><td>999999</td></tr>
+        <tr><td>Команда 5</td><td>999999</td></tr>
+    </table>
+
+    <!-- МАТЧИ -->
+    <div class="matches">
+
+        <div class="match">Команда 1<div class="vs">VS</div>Команда 2</div>
+        <div class="match">Команда 1<div class="vs">VS</div>Команда 3</div>
+        <div class="match">Команда 1<div class="vs">VS</div>Команда 4</div>
+        <div class="match">Команда 1<div class="vs">VS</div>Команда 5</div>
+
+        <div class="match">Команда 2<div class="vs">VS</div>Команда 3</div>
+        <div class="match">Команда 2<div class="vs">VS</div>Команда 4</div>
+        <div class="match">Команда 2<div class="vs">VS</div>Команда 5</div>
+
+        <div class="match">Команда 3<div class="vs">VS</div>Команда 4</div>
+        <div class="match">Команда 3<div class="vs">VS</div>Команда 5</div>
+
+        <div class="match">Команда 4<div class="vs">VS</div>Команда 5</div>
+
     </div>
 
-    <div class="group">
-        <h2>Группа B</h2>
-        <div class="team qualified"><span>Team 5</span><span class="score">3-0</span></div>
-        <div class="team qualified"><span>Team 6</span><span class="score">2-1</span></div>
-        <div class="team"><span>Team 7</span><span class="score">1-2</span></div>
-        <div class="team"><span>Team 8</span><span class="score">0-3</span></div>
-    </div>
-
-</div>
-
-<div class="playoffs">
-
-    <div class="match">
-        <div>Team 1</div>
-        <div class="vs">VS</div>
-        <div>Team 6</div>
-    </div>
-
-    <div class="match">
-        <div>Team 5</div>
-        <div class="vs">VS</div>
-        <div>Team 2</div>
+    <!-- ФИНАЛ -->
+    <div class="final">
+        <h2>ФИНАЛ</h2>
+        <p>1 место (по очкам) VS 2 место (по очкам)</p>
     </div>
 
 </div>
