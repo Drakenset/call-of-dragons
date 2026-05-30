@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Круговой турнир</title>
+<title>Турнир</title>
+
 <style>
     body {
         margin: 0;
         background: #0e0f14;
-        color: #fff;
+        color: white;
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
@@ -23,7 +24,7 @@
         max-width: 1000px;
     }
 
-    /* Таблица */
+    /* ТАБЛИЦА */
     table {
         width: 100%;
         border-collapse: collapse;
@@ -44,15 +45,17 @@
         color: #ffcc00;
     }
 
-    /* Матчи */
+    /* МАТЧИ (СЛЕВА НАПРАВО) */
     .matches {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
         margin-bottom: 40px;
     }
 
     .match {
+        width: 180px;
         background: #1a1c24;
         padding: 12px;
         border-radius: 10px;
@@ -65,7 +68,7 @@
         margin: 5px 0;
     }
 
-    /* Финал */
+    /* ФИНАЛ */
     .final {
         margin-top: 20px;
         padding: 20px;
@@ -82,9 +85,10 @@
 
 </style>
 </head>
+
 <body>
 
-<h1>Круговой турнир (5 команд)</h1>
+<h1>Круговой турнир</h1>
 
 <div class="container">
 
@@ -92,16 +96,18 @@
     <table>
         <tr>
             <th>Команда</th>
+            <th>Победы</th>
             <th>Очки</th>
         </tr>
-        <tr><td>Команда 1</td><td>999999</td></tr>
-        <tr><td>Команда 2</td><td>999999</td></tr>
-        <tr><td>Команда 3</td><td>999999</td></tr>
-        <tr><td>Команда 4</td><td>999999</td></tr>
-        <tr><td>Команда 5</td><td>999999</td></tr>
+
+        <tr><td>Команда 1</td><td>0</td><td>999999</td></tr>
+        <tr><td>Команда 2</td><td>0</td><td>999999</td></tr>
+        <tr><td>Команда 3</td><td>0</td><td>999999</td></tr>
+        <tr><td>Команда 4</td><td>0</td><td>999999</td></tr>
+        <tr><td>Команда 5</td><td>0</td><td>999999</td></tr>
     </table>
 
-    <!-- МАТЧИ -->
+    <!-- МАТЧИ (10 ИГР СЛЕВА НАПРАВО) -->
     <div class="matches">
 
         <div class="match">Команда 1<div class="vs">VS</div>Команда 2</div>
@@ -123,7 +129,7 @@
     <!-- ФИНАЛ -->
     <div class="final">
         <h2>ФИНАЛ</h2>
-        <p>1 место (по очкам) VS 2 место (по очкам)</p>
+        <p>1 место VS 2 место</p>
     </div>
 
 </div>
