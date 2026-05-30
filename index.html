@@ -24,7 +24,6 @@
         max-width: 1000px;
     }
 
-    /* ТАБЛИЦА */
     table {
         width: 100%;
         border-collapse: collapse;
@@ -45,7 +44,7 @@
         color: #ffcc00;
     }
 
-    /* МАТЧИ (СЛЕВА НАПРАВО) */
+    /* МАТЧИ */
     .matches {
         display: flex;
         flex-wrap: wrap;
@@ -55,7 +54,7 @@
     }
 
     .match {
-        width: 180px;
+        width: 200px;
         background: #1a1c24;
         padding: 12px;
         border-radius: 10px;
@@ -66,6 +65,12 @@
     .vs {
         color: #888;
         margin: 5px 0;
+    }
+
+    .time {
+        margin-top: 8px;
+        font-size: 12px;
+        color: #aaa;
     }
 
     /* ФИНАЛ */
@@ -81,6 +86,12 @@
     .final h2 {
         margin-bottom: 10px;
         color: #ffcc00;
+    }
+
+    .grand-time {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #aaa;
     }
 
 </style>
@@ -107,29 +118,66 @@
         <tr><td>Команда 5</td><td>0</td><td>999999</td></tr>
     </table>
 
-    <!-- МАТЧИ (10 ИГР СЛЕВА НАПРАВО) -->
+    <!-- МАТЧИ -->
     <div class="matches">
 
-        <div class="match">Команда 1<div class="vs">VS</div>Команда 2</div>
-        <div class="match">Команда 1<div class="vs">VS</div>Команда 3</div>
-        <div class="match">Команда 1<div class="vs">VS</div>Команда 4</div>
-        <div class="match">Команда 1<div class="vs">VS</div>Команда 5</div>
+        <div class="match">
+            Команда 1 <div class="vs">VS</div> Команда 2
+            <div class="time">Время игры - 30.05</div>
+        </div>
 
-        <div class="match">Команда 2<div class="vs">VS</div>Команда 3</div>
-        <div class="match">Команда 2<div class="vs">VS</div>Команда 4</div>
-        <div class="match">Команда 2<div class="vs">VS</div>Команда 5</div>
+        <div class="match">
+            Команда 1 <div class="vs">VS</div> Команда 3
+            <div class="time">Время игры - 30.05</div>
+        </div>
 
-        <div class="match">Команда 3<div class="vs">VS</div>Команда 4</div>
-        <div class="match">Команда 3<div class="vs">VS</div>Команда 5</div>
+        <div class="match">
+            Команда 1 <div class="vs">VS</div> Команда 4
+            <div class="time">Время игры - 30.05</div>
+        </div>
 
-        <div class="match">Команда 4<div class="vs">VS</div>Команда 5</div>
+        <div class="match">
+            Команда 1 <div class="vs">VS</div> Команда 5
+            <div class="time">Время игры - 30.05</div>
+        </div>
+
+        <div class="match">
+            Команда 2 <div class="vs">VS</div> Команда 3
+            <div class="time">Время игры - 30.05</div>
+        </div>
+
+        <div class="match">
+            Команда 2 <div class="vs">VS</div> Команда 4
+            <div class="time">Время игры - 30.05</div>
+        </div>
+
+        <div class="match">
+            Команда 2 <div class="vs">VS</div> Команда 5
+            <div class="time">Время игры - 30.05</div>
+        </div>
+
+        <div class="match">
+            Команда 3 <div class="vs">VS</div> Команда 4
+            <div class="time">Время игры - 30.05</div>
+        </div>
+
+        <div class="match">
+            Команда 3 <div class="vs">VS</div> Команда 5
+            <div class="time">Время игры - 30.05</div>
+        </div>
+
+        <div class="match">
+            Команда 4 <div class="vs">VS</div> Команда 5
+            <div class="time">Время игры - 30.05</div>
+        </div>
 
     </div>
 
-    <!-- ФИНАЛ -->
+    <!-- ГРАНД ФИНАЛ -->
     <div class="final">
-        <h2>ФИНАЛ</h2>
+        <h2>ГРАНД ФИНАЛ</h2>
         <p>1 место VS 2 место</p>
+        <div class="grand-time">Время игры - 30.05</div>
     </div>
 
 </div>
